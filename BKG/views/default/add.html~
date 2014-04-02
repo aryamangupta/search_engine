@@ -1,0 +1,5 @@
+{{extend 'layout.html'}}
+{{if not 'login' in auth.settings.actions_disabled:}}
+{{=auth.user}}      
+{{pass}}
+{{=form}}

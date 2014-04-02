@@ -1,0 +1,9 @@
+[2014-03-29 01:08:12] START
+[2014-03-29 01:10:04] EDIT yo/models/db.py: 2
+[2014-03-29 01:14:07] EDIT yo/controllers/default.py: 5
+[2014-03-29 01:15:08] EDIT yo/controllers/default.py: 0
+[2014-03-29 01:20:14] CREATE mine.html: 0
+[2014-03-29 01:20:36] EDIT yo/views/mine.html: 2
+[2014-03-29 01:25:03] DELETE yo/views/mine.html: -5
+[2014-03-29 01:25:40] EDIT yo/controllers/default.py: 0
+[2014-04-01 23:18:49] EDIT yo/static/css/web2py.css: 8

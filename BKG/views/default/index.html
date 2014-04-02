@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+{{=message}}
+<br/><br/><br/>
+{{=var}}
+<form >
+Search    <input type="text" id='text' name='text' value='val'></input>
+<input type="submit" onsubmit="{{=URL('login'}}">Submit</input>
+</form>
+<br/><br/><br/>
+<a id = '1' href = "{{=URL('login')}}">login</a>
+<a id = '2' href = "{{=URL('login', args='register')}}">register</a>
+<br/>
+<a id = '3' href = "{{=URL('add')}}">add</a>
+
