@@ -1,0 +1,27 @@
+{{extend 'layout.html'}}
+
+{{for row in record:}}
+      <h3>{{=row.name}}</h3><br>
+      <h4>{{=row.area}}</h4><br>
+      <h4>{{=row.city}}</h4><br>
+      {{pass}}
+      	
+
+<br/><br/><br/>
+<h4>Comments from other users:<br/>
+{{for row in comments:}}
+      {{=row.user}}:<br/>
+      {{=row.comment}}<br/>
+      {{pass}}</h4>
+      
+<h4>Images:<br/>
+{{for row in images:}}</h4>
+      <img width="200px" src="{{=URL('download', args=row.image)}}" /><br/>
+      {{pass}}
+<br/><br/><br/>
+<h4><a id = '1' href = "{{=URL('login')}}">login</a>
+<a id = '2' href = "{{=URL('login', args='register')}}">register</a>
+<br/>
+<a id = '3' href = "{{=URL('add')}}">add</a><br/>
+<a id = '4' href = "{{=URL('add_comment',args=request.args[0])}}">add_comments</a><br/>
+<a id = '4' href = "{{=URL('add_image',args=request.args[0])}}">add_images</a></h4>

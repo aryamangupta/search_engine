@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+{{for row in tab:}}
+   <h2><a id = '5' href= {{=URL('info'), args= row.id}}>{{=row.name}}</a></h2>
+   <br/>
+   {{pass}}
+{{pass}}
+
+<br/><br/><br/>
+<h4><a id = '1' href = "{{=URL('login')}}">login</a>
+<a id = '2' href = "{{=URL('login', args='register')}}">register</a>
+<br/>
+<a id = '3' href = "{{=URL('add')}}">add</a></h4>
+<br/>
+

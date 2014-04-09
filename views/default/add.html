@@ -1,6 +1,0 @@
-{{extend 'layout.html'}}
-{{if auth.user == None:}}
-    {{redirect(URL('login'))}}
-{{else:}}      
-    {{pass}}
-{{=form}}
