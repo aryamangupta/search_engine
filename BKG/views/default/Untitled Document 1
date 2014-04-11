@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+{{=val}}
+
+<br/><br/><br/>
+<h4><a id = '1' href = "{{=URL('login')}}">login</a>
+<a id = '2' href = "{{=URL('login', args='register')}}">register</a>
+<br/>
+<a id = '3' href = "{{=URL('add')}}">add</a></h4>

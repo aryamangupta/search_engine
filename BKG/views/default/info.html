@@ -9,10 +9,13 @@
 
 <br/><br/><br/>
 <h4>Comments from other users:<br/>
+</h4>
+<p >
 {{for row in comments:}}
-      {{=row.user}}:<br/>
-      {{=row.comment}}<br/>
-      {{pass}}</h4>
+
+ <font color="blue">{{=row.user}}:</font><br/>
+  <font color="#006400">{{=row.comment}}</font>    <br/><br>
+      {{pass}}
       
 <h4>Images:<br/></h4>
 {{for row in images:}}
