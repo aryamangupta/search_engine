@@ -1,0 +1,51 @@
+{{extend 'layout1.html'}}
+
+{{for row in record:}}
+<center>
+      <img width="33%" src="{{=URL('download', args=row.images)}}" />
+      <h3>{{=row.name.capitalize()}}</h3></center>
+      <h4>Location:   </h4>
+		<h5>	{{=row.address}}</h5><br>
+      <h4>Cuisine: </h4>
+			<h5>	{{=row.cuisine}}</h5>
+      <h4>First Review:</h4>
+		 <h5> {{=row.comments}} </h5>
+      {{pass}}
+      	
+
+<br/><br/><br/>
+<h4>Comments from other users:<br/>
+{{if comments == []:}}
+    {{=message}}
+    {{pass}}
+{{for row in comments:}}
+    {{=row.user}}:<br/>
+    {{=row.comment}}<br/>
+    {{pass}}</h4>   
+
+<br/><br/><br/>
+<h3><a id = '1' href = "{{=URL('home_user')}}">home</a></h3><br/>
+
+<table style="width:100%">
+<tr><td>
+<div id ="form_comment">
+{{=form_comment}}
+</div>
+<div id="comment">
+add a comment
+</div>
+
+</td>
+</tr></table>
+
+<script>
+     jQuery(document).ready(function(){
+        jQuery("#form").hide();
+        jQuery('#mcomment').click(function(){
+              jQuery("#form").show();
+        });
+        jQuery("#mcomment").submit(function(){
+        	jQuery("#form").hide();
+        });   
+    });
+</script>    

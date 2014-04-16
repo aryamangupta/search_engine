@@ -1,4 +1,4 @@
-{{extend 'layout.html'}}
+{{extend 'layout1.html'}}
 {{if not 'login' in auth.settings.actions_disabled:}}
 {{=auth.user}}      
 {{pass}}

@@ -1,0 +1,16 @@
+body {
+  font-family: "ZomatoIsHiring", "Helvetica Neue", "Helvetica", "Calibri", Arial, sans-serif;
+  font-size: 13px;
+  color: #2d2d2a;
+  min-width: 1000px;
+}
+a {
+  text-decoration: none;
+  color: #CB202D;
+}
+a:focus {
+  outline: none;
+}
+a:hover {
+  text-decoration: underline;
+}

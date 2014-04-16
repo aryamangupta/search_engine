@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+{{if auth.user == None:}}
+    {{redirect(URL('login'))}}
+{{else:}}      
+    {{pass}}
+{{=message}}
+<h4><a id = '6' href = "{{=URL('add')}}">add a restaurant</a>
+<a id = '7' href = "{{=URL('addm')}}">add a movie-hall</a></h4>

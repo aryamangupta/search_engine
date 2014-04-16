@@ -1,14 +1,26 @@
 {{extend 'layout.html'}}
+<h3>Restaurants:</h3>
 {{for row in tab:}}
-   <h2><a id = '5' href= {{=URL('info'), args= row.id}}>{{=row.name}}</a></h2>
+   <img width="200px" src="{{=URL('download', args=row.images)}}" />
+   <h2><a id = '5' href= {{=URL('info', args=row.id)}}>{{=row.name.capitalize()}}</a></h2>
+   <h4>{{=row.address}}</h4><br>
+   <h4>{{=row.cuisine}}</h4><br>
+   <h5>First Review: {{=row.comments}}</h4><br>   
+   <br/>
+   {{pass}}
+{{pass}}
+
+<h3>Movie_Halls:</h3>
+{{for row in mov:}}
+   <img width="200px" src="{{=URL('download', args=row.images)}}" />
+   <h2><a id = '5' href= {{=URL('infom', args=row.id)}}>{{=row.name.capitalize()}}</a></h2>
+   <h4>{{=row.location}}</h4><br>
+   <h5>First Review: {{=row.comments}}</h4><br>   
    <br/>
    {{pass}}
 {{pass}}
 
 <br/><br/><br/>
-<h4><a id = '1' href = "{{=URL('login')}}">login</a>
-<a id = '2' href = "{{=URL('login', args='register')}}">register</a>
-<br/>
-<a id = '3' href = "{{=URL('add')}}">add</a></h4>
+<a id = '1' href = "{{=URL('add')}}">add</a></h4>
 <br/>
 

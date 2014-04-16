@@ -1,0 +1,98 @@
+body {
+  font-family: "ZomatoIsHiring", "Helvetica Neue", "Helvetica", "Calibri", Arial, sans-serif;
+  font-size: 13px;
+  background-color:#2E8B57;
+  min-width: 1000px;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #A0522D;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+h1 {
+	color:#FAFAD2;
+    font-size: 3.5em;
+    margin: 0.67em 0;
+}
+
+h2 {
+	color:  #DC143C;
+    font-size: 2.7em;
+    margin: 0.83em 0;
+}
+
+h3 {
+	color:#FFFACD;
+    font-size: 2.0em;
+    margin: 1em 0;
+}
+
+h4 {
+	color: 	 #DC143C;
+    font-size: 1.7em;
+    margin: 1.33em 0;
+}
+
+h5 {
+	color: 	#FFFACD;
+    font-size: 1.36em;
+    margin: 1.67em 0;
+}
+
+h6 {
+	color:  #DC143C;
+    font-size: 1.04em;
+    margin: 2.33em 0;
+}
+
+
+.divfound {
+	border-top: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+    line-height: 22px;
+    padding: 10px 0;
+}
+
+#a{
+	font-size: 2.0em;
+	color:#FAEBD7;
+}
+
+#b{
+	font-size: 2.0em;
+	color:#FAEBD7;
+}
+
+.divl
+{
+width:150px;
+height:150px;
+float:left;
+clear:left;
+} 
+
+.divr
+{
+width:150px;
+height:150px;
+float:left;
+} 
+
+.cr{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+border-radius:10px;
+}

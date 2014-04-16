@@ -1,0 +1,42 @@
+{{extend 'layout.html'}}
+<h2>{{=message}}</h2>
+<br/><br/><br/>
+<h3><form action = "{{=URL('found')}}" method = "get">
+Search    <input type="text" id='text' name='text'></input>
+<input type="submit" />
+</form></h3>
+<br/><br/><br/>
+
+<div id ="a">add a cinema hall </div>
+
+<div id ="movie">
+{{=form_movie}}
+</div>
+
+<div id ="b">add a restaurant </div>
+
+<div id ="restaurant">
+{{=form_restaurant}}
+</div>
+
+<script>
+     jQuery(document).ready(function(){
+        jQuery("#movie").hide();
+        jQuery('#a').click(function(){
+              jQuery("#movie").show();
+              jQuery("#restaurant").hide();
+        });
+        jQuery("#movie").submit(function(){
+        	jQuery("#movie").hide();
+        });
+        
+        jQuery("#restaurant").hide();
+        jQuery('#b').click(function(){
+              jQuery("#restaurant").show();
+              jQuery("#movie").show();
+        });
+        jQuery("#restaurant").submit(function(){
+        	jQuery("#restaurant").hide();
+        });   
+    });
+</script>

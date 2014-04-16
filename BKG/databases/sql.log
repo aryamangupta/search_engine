@@ -556,3 +556,31 @@ success!
 success!
 success!
 success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2014-04-15T23:21:28.990552
+ALTER TABLE Restaurants ADD cuisine CHAR(512);
+success!
+timestamp: 2014-04-15T23:21:29.016263
+ALTER TABLE Comments ADD table_name CHAR(512);
+success!
+timestamp: 2014-04-15T23:21:29.044445
+CREATE TABLE Movie_Halls(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    area CHAR(512),
+    city CHAR(512),
+    comments CHAR(512),
+    location CHAR(512),
+    images CHAR(512)
+);
+success!
+timestamp: 2014-04-15T23:25:36.409434
+ALTER TABLE auth_user ADD username CHAR(128);
+success!

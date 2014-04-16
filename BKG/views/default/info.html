@@ -1,30 +1,72 @@
-{{extend 'layout.html'}}
+{{extend 'layout1.html'}}
 
 {{for row in record:}}
-      <h3>{{=row.name}}</h3><br>
-      <h4>{{=row.area}}</h4><br>
-      <h4>{{=row.city}}</h4><br>
+<center>
+      <img width="33%" src="{{=URL('download', args=row.images)}}" />
+      <h3>{{=row.name.capitalize()}}</h3></center>
+      <h4>Location:   </h4>
+		<h5>	{{=row.address}}</h5><br>
+      <h4>Cuisine: </h4>
+			<h5>	{{=row.cuisine}}</h5>
+      <h4>First Review:</h4>
+		 <h5> {{=row.comments}} </h5>
       {{pass}}
       	
 
 <br/><br/><br/>
 <h4>Comments from other users:<br/>
-</h4>
-<p >
+{{if comments == []:}}
+    {{=message}}
+    {{pass}}
 {{for row in comments:}}
-
- <font color="blue">{{=row.user}}:</font><br/>
-  <font color="#006400">{{=row.comment}}</font>    <br/><br>
-      {{pass}}
-      
+    {{=row.user}}:<br/>
+    {{=row.comment}}<br/>
+    {{pass}}</h4>  
 <h4>Images:<br/></h4>
 {{for row in images:}}
-      <img width="200px" src="{{=URL('download', args=row.image)}}" /><br/>
+      <img height="100px" width="100px" src="{{=URL('download', args=row.image)}}" />
       {{pass}}
 <br/><br/><br/>
-<h4><a id = '1' href = "{{=URL('login')}}">login</a>
-<a id = '2' href = "{{=URL('login', args='register')}}">register</a>
 <br/>
-<a id = '3' href = "{{=URL('add')}}">add</a><br/>
-<a id = '4' href = "{{=URL('add_comment',args=request.args[0])}}">add_comments</a><br/>
-<a id = '4' href = "{{=URL('add_image',args=request.args[0])}}">add_images</a></h4>
+
+<h3><a id = '1' href = "{{=URL('home_user')}}">home</a></h3><br/>
+
+<table style="width:100%">
+<tr><td>
+<div id ="form_comment">
+{{=form_comment}}
+</div>
+<div id="comment">
+add a comment
+</div>
+
+</td>
+<td>
+
+<div id ="form_images">
+{{=form_images}}
+</div>
+<div id="images">
+add an image
+</div>
+</td>
+</tr></table>
+<script>
+     jQuery(document).ready(function(){
+        jQuery("#form_comment").hide();
+        jQuery('#comment').click(function(){
+              jQuery("#form_comment").show();
+        });
+        jQuery("#comment").submit(function(){
+        	jQuery("#form_comment").hide();
+        });   
+        
+        jQuery("#form_images").hide();
+        jQuery('#images').click(function(){
+              jQuery("#form_images").show();
+        });
+        jQuery("#images").submit(function(){
+        	jQuery("#images").hide();
+        });   
+    });
+</script>

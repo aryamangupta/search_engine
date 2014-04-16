@@ -1,14 +1,36 @@
-{{extend 'layout.html'}}
+{{extend 'layout1.html'}}
+<head>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<div class="divfound">
+
+<h3>Restaurants:</h3>
 {{for row in tab:}}
-   <h2><a id = '5' href= {{=URL('info', args=row.id)}}>{{=row.name}}</a></h2>
+ <center>  <img width="27%" src="{{=URL('download', args=row.images)}}" />
+   <h2 color="#B22222"><a id = '5' href= {{=URL('info', args=row.id)}}>{{=row.name.capitalize()}}</a></h2></center>
+   <h4 color="#228B22">{{=row.address}}</h4><br>
+   <h4 color="#228B22">{{=row.cuisine}}</h4><br>
+   <h5 color="#20B2AA">First Review:</h4><br>  
+ 		{{=row.comments}}   
    <br/>
    {{pass}}
 {{pass}}
-
+</div>
+<br>
+<div class="divfound">
+<h3>Movie_Halls:</h3>
+{{for row in mov:}}
+  <center>   <img width="27%" src="{{=URL('download', args=row.images)}}" />
+   <h2 color="#B22222"><a id = '5' href= {{=URL('infom', args=row.id)}}>{{=row.name.capitalize()}}</a></h2></center>
+   <h4 color="#228B22">{{=row.location}}</h4><br>
+   <h5 color="#20B2AA">First Review: </h4><br>   
+		{{=row.comments}}
+   <br/>
+   {{pass}}
+{{pass}}
+</div>
 <br/><br/><br/>
-<h4><a id = '1' href = "{{=URL('login')}}">login</a>
-<a id = '2' href = "{{=URL('login', args='register')}}">register</a>
-<br/>
-<a id = '3' href = "{{=URL('add')}}">add</a></h4>
+<font size="3.5em"> 
+<a id = '1' href = "{{=URL('home_user')}}">home</a></font><br/>
 <br/>
 
